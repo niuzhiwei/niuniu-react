@@ -1,3 +1,3 @@
 const div = document.createElement('div')
-div.innerText = 'div'
+div.innerText = 'hello'
 document.body.appendChild(div)
