@@ -1,1 +1,3 @@
-console.log(3)
+const div = document.createElement('div')
+div.innerText = 'div'
+document.body.appendChild(div)

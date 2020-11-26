@@ -1,6 +1,7 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
-  mode: 'production',//生产模式
+  mode: 'production', //生产模式
   entry: {
     FUI: './lib/index.tsx'
   },
@@ -16,5 +17,10 @@ module.exports = {
         loader: 'awesome-typescript-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    })
+  ]
 }
