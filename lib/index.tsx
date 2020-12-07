@@ -4,4 +4,7 @@ import Icon from './icon';
 const fn:React.MouseEventHandler<Element> = (e)=>{
     console.log(e.target)
 };
-ReactDOM.render(<div><Icon name="wechat" onClick={fn} /></div>,document.querySelector('#root'));
+const fn1:React.MouseEventHandler<Element>=(e)=>{
+    console.log(e)
+}
+ReactDOM.render(<div><Icon className='wechat' name="wechat" onClick={fn} onMouseEnter={fn1} /></div>,document.querySelector('#root'));
