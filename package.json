@@ -1,6 +1,6 @@
 {
   "name": "niuniu-react",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "niuniu's react",
   "main": "dist/lib/FUI",
   "types": "dist/lib/index",
