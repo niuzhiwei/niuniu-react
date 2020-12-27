@@ -1,24 +1,24 @@
-<testsuites name="jest tests" tests="8" failures="0" time="35.605">
-  <testsuite name="test" errors="0" failures="0" skipped="0" timestamp="2020-12-27T04:47:58" time="15.777" tests="1">
-    <testcase classname="test 1 == 1" name="test 1 == 1" time="0.007">
+<testsuites name="jest tests" tests="8" failures="0" time="24.65">
+  <testsuite name="test" errors="0" failures="0" skipped="0" timestamp="2020-12-27T07:09:21" time="6.497" tests="1">
+    <testcase classname="test 1 == 1" name="test 1 == 1" time="0.017">
     </testcase>
   </testsuite>
-  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2020-12-27T04:47:58" time="18.506" tests="5">
-    <testcase classname="classes 接受1个classname" name="classes 接受1个classname" time="0.005">
+  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2020-12-27T07:09:21" time="12.819" tests="5">
+    <testcase classname="classes 接受1个classname" name="classes 接受1个classname" time="0.006">
     </testcase>
-    <testcase classname="classes 接受2个classname" name="classes 接受2个classname" time="0">
+    <testcase classname="classes 接受2个classname" name="classes 接受2个classname" time="0.002">
     </testcase>
-    <testcase classname="classes 接受undefined" name="classes 接受undefined" time="0.001">
+    <testcase classname="classes 接受undefined" name="classes 接受undefined" time="0">
     </testcase>
-    <testcase classname="classes 接受各种奇怪值" name="classes 接受各种奇怪值" time="0">
+    <testcase classname="classes 接受各种奇怪值" name="classes 接受各种奇怪值" time="0.001">
     </testcase>
     <testcase classname="classes 接受0个参数" name="classes 接受0个参数" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2020-12-27T04:47:58" time="18.664" tests="2">
-    <testcase classname="icon render successfully" name="icon render successfully" time="0.028">
+  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2020-12-27T07:09:21" time="12.962" tests="2">
+    <testcase classname="icon render successfully" name="icon render successfully" time="0.025">
     </testcase>
-    <testcase classname="icon onclick" name="icon onclick" time="0.075">
+    <testcase classname="icon onclick" name="icon onclick" time="0.07">
     </testcase>
   </testsuite>
 </testsuites>
