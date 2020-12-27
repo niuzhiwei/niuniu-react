@@ -1,3 +1,4 @@
 # niuniu-react
-[![<ORG_NAME>](https://circleci.com/gh/niuzhiwei/niuniu-react.svg?style=svg)](<LINK>)
-niuniu's react 
+[![CircleCI](https://circleci.com/gh/niuzhiwei/niuniu-react.svg?style=svg)](https://circleci.com/gh/niuzhiwei/niuniu-react)
+
+niuniu's react
