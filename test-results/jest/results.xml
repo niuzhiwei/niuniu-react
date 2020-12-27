@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="8" failures="0" errors="0" time="10.401">
-  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2020-12-21T14:41:08" time="2.702" tests="2">
-    <testcase classname="icon render successfully" name="icon render successfully" time="0.016">
-    </testcase>
-    <testcase classname="icon onclick" name="icon onclick" time="0.044">
+<testsuites name="jest tests" tests="8" failures="0" time="35.605">
+  <testsuite name="test" errors="0" failures="0" skipped="0" timestamp="2020-12-27T04:47:58" time="15.777" tests="1">
+    <testcase classname="test 1 == 1" name="test 1 == 1" time="0.007">
     </testcase>
   </testsuite>
-  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2020-12-21T14:41:11" time="0.261" tests="5">
-    <testcase classname="classes 接受1个classname" name="classes 接受1个classname" time="0.002">
+  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2020-12-27T04:47:58" time="18.506" tests="5">
+    <testcase classname="classes 接受1个classname" name="classes 接受1个classname" time="0.005">
     </testcase>
-    <testcase classname="classes 接受2个classname" name="classes 接受2个classname" time="0.001">
+    <testcase classname="classes 接受2个classname" name="classes 接受2个classname" time="0">
     </testcase>
-    <testcase classname="classes 接受undefined" name="classes 接受undefined" time="0">
+    <testcase classname="classes 接受undefined" name="classes 接受undefined" time="0.001">
     </testcase>
     <testcase classname="classes 接受各种奇怪值" name="classes 接受各种奇怪值" time="0">
     </testcase>
-    <testcase classname="classes 接受0个参数" name="classes 接受0个参数" time="0.001">
+    <testcase classname="classes 接受0个参数" name="classes 接受0个参数" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="test" errors="0" failures="0" skipped="0" timestamp="2020-12-21T14:41:11" time="0.297" tests="1">
-    <testcase classname="test 1 == 1" name="test 1 == 1" time="0.001">
+  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2020-12-27T04:47:58" time="18.664" tests="2">
+    <testcase classname="icon render successfully" name="icon render successfully" time="0.028">
+    </testcase>
+    <testcase classname="icon onclick" name="icon onclick" time="0.075">
     </testcase>
   </testsuite>
 </testsuites>
