@@ -1,6 +1,6 @@
 #!/bin/env bash
 yarn doc
-git checout gh-pages
+git checkout gh-pages
 mv -f doc/* ./
 git add .
 git commit -m 'update'
