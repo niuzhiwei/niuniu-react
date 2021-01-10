@@ -7333,6 +7333,11 @@ pretty-format@^24.9.0:
     ansi-styles "^3.2.0"
     react-is "^16.8.4"
 
+prism-react-renderer@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npm.taobao.org/prism-react-renderer/download/prism-react-renderer-1.1.1.tgz#1c1be61b1eb9446a146ca7a50b7bcf36f2a70a44"
+  integrity sha1-HBvmGx65RGoUbKelC3vPNvKnCkQ=
+
 private@^0.1.8:
   version "0.1.8"
   resolved "https://registry.npm.taobao.org/private/download/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
