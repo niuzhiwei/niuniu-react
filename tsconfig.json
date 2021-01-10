@@ -27,7 +27,7 @@
   "include": [
     "lib/types/custom.d.ts",
     "lib/**/*"
-  ],
+, "demo.tsx"  ],
   "exclude": [
     "node_modules",
     "build",

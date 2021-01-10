@@ -38,7 +38,8 @@ $border-color:#eee;
 .site-page {
     background: #fff;
 }
-.site-main{
+
+.site-main {
     padding-top: $padding;
 }
 
@@ -72,14 +73,23 @@ $border-color:#eee;
     }
 
     ul {
-        padding: 0 $padding;
         min-width: 12em;
 
         >li {
-            padding: 8px 0;
 
             a {
-                color: $main-color;
+                color: #333;
+                padding: 8px $padding;
+                display: block;
+
+                &:hover {
+                    color: $main-color;
+                }
+
+                &.active {
+                    color: #fff;
+                    background: desaturate($main-color, 50%);
+                }
             }
         }
     }
