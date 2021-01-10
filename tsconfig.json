@@ -25,6 +25,7 @@
     "allowSyntheticDefaultImports": true
   },
   "include": [
+    "lib/types/custom.d.ts",
     "lib/**/*"
   ],
   "exclude": [
