@@ -11,7 +11,7 @@ const Layout:React.FunctionComponent<Props> = (props)=>{
     const {className,...rest} = props
     return (
         <div className={sc('aside',{extra:className})} {...rest}>
-            Aside
+           {props.children}
         </div>
     )
 }
