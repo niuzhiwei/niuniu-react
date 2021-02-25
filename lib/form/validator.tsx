@@ -12,7 +12,6 @@ interface FormRule {
 type FormRules = Array<FormRule>
 
 function isEmpty(value: any) {
-
     return value === undefined || value === null || value === ''
 }
 export function noError(errors: any) {
