@@ -11,4 +11,22 @@
         right: 0;
         left: 0;
     }
+
+    &-track {
+        width: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    &-bar {
+        height: 30px;
+        background-color: rgb(128,128,128);
+        position: absolute;
+        top: 0;
+        left: 2px;
+        width: 6px;
+        border-radius: 3px;
+    }
 }
