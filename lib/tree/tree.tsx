@@ -7,12 +7,11 @@ export interface SourceDataItem {
     value: string;
     children?: SourceDataItem[];
 }
-type A = { selected: string[], multiple: true }
-type B = { selected: string, multiple: false }
+
 type Props = {
     sourceData: SourceDataItem[];
     onChange: (item: SourceDataItem, bool: boolean) => void;
-} & (A | B)
+} & ({ selected: string[], multiple: true } | { selected: string, multiple: false })
 const scopedClass = scopedClassMaker('fui-tree');
 const sc = scopedClass;
 const renderItem = (
