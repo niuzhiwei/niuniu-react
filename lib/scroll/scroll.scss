@@ -1,10 +1,10 @@
 .fui-scroll {
     position: relative;
     overflow: hidden;
+    border: 1px solid red;
 
     &-inner {
         overflow: auto;
-        border: 1px solid blue;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -32,5 +32,14 @@
         left: 2px;
         width: 6px;
         border-radius: 3px;
+    }
+
+    &-pulling {
+        overflow: hidden;
+        border: 1px solid pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
     }
 }
