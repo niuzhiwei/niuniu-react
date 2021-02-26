@@ -2,17 +2,23 @@ import { scopedClassMaker } from '../helpers/classnames';
 import React from 'react';
 import './tree.scss';
 
-interface SourceDataItem {
+export interface SourceDataItem {
     text: string;
     value: string;
     children?: SourceDataItem[];
 }
 interface Props {
-    sourceData: SourceDataItem[]
+    sourceData: SourceDataItem[];
+    selectedValues: string[];
+    onChange: (item: SourceDataItem, bool: boolean) => void;
 }
 const scopedClass = scopedClassMaker('fui-tree');
 const sc = scopedClass;
-const renderItem = (item: SourceDataItem, level = 1) => {
+const renderItem = (
+    item: SourceDataItem,
+    selectedValues: string[],
+    onChange: (item: SourceDataItem, bool: boolean) => void,
+    level = 1) => {
     const classes = {
         ['level-' + level]: true,
         'item': true
@@ -20,9 +26,15 @@ const renderItem = (item: SourceDataItem, level = 1) => {
     return <div
         key={item.value}
         className={sc(classes)}>
-        {item.text}
+        <div className={sc('text')}>
+            <input
+                type="checkbox"
+                onChange={(e) => onChange(item, e.target.checked)}
+                checked={selectedValues.indexOf(item.value) >= 0} />
+            {item.text}
+        </div>
         {item.children?.map(sub => {
-            return renderItem(sub, level + 1)
+            return renderItem(sub, selectedValues, onChange, level + 1)
         })}
     </div>
 }
@@ -30,7 +42,7 @@ const Tree: React.FunctionComponent<Props> = (props) => {
     return (
         <div>
             {props.sourceData?.map(item => {
-                return renderItem(item)
+                return renderItem(item, props.selectedValues, props.onChange)
             })}
         </div>
     )
