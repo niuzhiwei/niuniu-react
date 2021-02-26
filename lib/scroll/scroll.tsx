@@ -3,11 +3,11 @@ import './scroll.scss';
 import scrollbarWidth from './scrollbar-width';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
-
+    onPull?: () => void
 }
 
 const Scroll: React.FunctionComponent<Props> = (props) => {
-    const { children, ...rest } = props;
+    const { children, onPull, ...rest } = props;
     const [barHeight, setBarHeight] = useState(0);
     const [barTop, _setBarTop] = useState(0);
     const [BarVisible, setBarVisible] = useState(false);
@@ -113,6 +113,10 @@ const Scroll: React.FunctionComponent<Props> = (props) => {
         lastYRef.current = e.touches[0].clientY
     }
     const onTouchEnd: TouchEventHandler = () => {
+        if (pulling.current === true) {
+            props.onPull && props.onPull();
+            pulling.current = false;
+        }
         setTranslateY(0)
     }
     return (
