@@ -1,6 +1,7 @@
 import React, { ChangeEventHandler, useState } from 'react';
 import { scopedClassMaker } from '../helpers/classnames';
 import { SourceDataItem, TreeProps } from './SourceDataItem';
+import useUpdate from '../hooks/useUpdate';
 
 interface treeProps {
     item: SourceDataItem;
@@ -37,7 +38,8 @@ const TreeItem: React.FunctionComponent<treeProps> = (props) => {
     const collapse = () => {
         setExpanded(false)
     }
-    const [expanded, setExpanded] = useState(true)
+    const [expanded, setExpanded] = useState(true);
+    useUpdate(expanded, () => { console.log(expanded) });
     return <div
         key={item.value}
         className={sc(classes)}>
