@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Tree from './tree';
-import { SourceDataItem } from './tree'
 
 const TreeExample: React.FunctionComponent = () => {
     const [array] = useState([{
@@ -33,19 +32,12 @@ const TreeExample: React.FunctionComponent = () => {
             { text: '3.2', value: '3.2' }
         ]
     }])
-    const [selectedValues, setSelectedValues] = useState(['1.1.1']);
-    const [selectedValue] = useState('1.1.1')
-    const onChange = (item: SourceDataItem, bool: boolean) => {
-        if (bool) {
-            setSelectedValues([...selectedValues, item.value])
-        } else {
-            setSelectedValues(selectedValues.filter(value => value !== item.value))
-        }
-    }
+    // const [selectedValues, setSelectedValues] = useState(['1.1.1']);
+    const [selectedValue, setSelectedValue] = useState('1.1.1')
     return (
         <Tree
             sourceData={array}
-            onChange={onChange}
+            onChange={(selected: string) => { setSelectedValue(selected) }}
             selected={selectedValue}
         ></Tree>
     )
