@@ -10,6 +10,7 @@ const Scroll: React.FunctionComponent<Props> = (props) => {
     const { children, ...rest } = props;
     const [barHeight, setBarHeight] = useState(0);
     const [barTop, _setBarTop] = useState(0);
+    const [BarVisible, setBarVisible] = useState(false)
     const setBarTop = (number: number) => {
         const { current } = containerRef
         const scrollHeight = current!.scrollHeight;//滚动全高
@@ -19,13 +20,20 @@ const Scroll: React.FunctionComponent<Props> = (props) => {
         if (number > maxBarTop) { return }
         _setBarTop(number)
     }
-
+    const timerIdRef = useRef<number | null>(null);
     const onScroll: UIEventHandler = (e) => {
+        setBarVisible(true);
         const { current } = containerRef
         const scrollHeight = current!.scrollHeight;//滚动全高
         const viewHeight = current!.getBoundingClientRect().height;//可视范围高度
         const scrollTop = current!.scrollTop;
-        setBarTop(scrollTop * viewHeight / scrollHeight)
+        setBarTop(scrollTop * viewHeight / scrollHeight);
+        if (timerIdRef.current !== null) {
+            window.clearTimeout(timerIdRef.current)
+        }
+        timerIdRef.current = window.setTimeout(() => {
+            setBarVisible(false)
+        }, 300)
     }
     const containerRef = useRef<HTMLDivElement>(null);
 
@@ -84,14 +92,16 @@ const Scroll: React.FunctionComponent<Props> = (props) => {
             >
                 {children}
             </div>
-            <div className='fui-scroll-track'>
-                <div
-                    className="fui-scroll-bar"
-                    style={{ height: barHeight, transform: `translateY(${barTop}px)` }}
-                    onMouseDown={onMouseDownBar}
+            {BarVisible &&
+                <div className='fui-scroll-track'>
+                    <div
+                        className="fui-scroll-bar"
+                        style={{ height: barHeight, transform: `translateY(${barTop}px)` }}
+                        onMouseDown={onMouseDownBar}
 
-                ></div>
-            </div>
+                    ></div>
+                </div>
+            }
         </div>
     )
 }

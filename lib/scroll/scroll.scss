@@ -10,6 +10,10 @@
         bottom: 0;
         right: 0;
         left: 0;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     &-track {
@@ -22,7 +26,7 @@
 
     &-bar {
         height: 30px;
-        background-color: rgb(128,128,128);
+        background-color: rgb(128, 128, 128);
         position: absolute;
         top: 0;
         left: 2px;
