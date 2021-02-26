@@ -7,16 +7,17 @@ export interface SourceDataItem {
     value: string;
     children?: SourceDataItem[];
 }
-interface Props {
+type A = { selected: string[], multiple: true }
+type B = { selected: string, multiple: false }
+type Props = {
     sourceData: SourceDataItem[];
-    selectedValues: string[];
     onChange: (item: SourceDataItem, bool: boolean) => void;
-}
+} & (A | B)
 const scopedClass = scopedClassMaker('fui-tree');
 const sc = scopedClass;
 const renderItem = (
     item: SourceDataItem,
-    selectedValues: string[],
+    selected: string[],
     onChange: (item: SourceDataItem, bool: boolean) => void,
     level = 1) => {
     const classes = {
@@ -30,21 +31,27 @@ const renderItem = (
             <input
                 type="checkbox"
                 onChange={(e) => onChange(item, e.target.checked)}
-                checked={selectedValues.indexOf(item.value) >= 0} />
+                checked={selected.indexOf(item.value) >= 0} />
             {item.text}
         </div>
         {item.children?.map(sub => {
-            return renderItem(sub, selectedValues, onChange, level + 1)
+            return renderItem(sub, selected, onChange, level + 1)
         })}
     </div>
 }
 const Tree: React.FunctionComponent<Props> = (props) => {
-    return (
-        <div>
-            {props.sourceData?.map(item => {
-                return renderItem(item, props.selectedValues, props.onChange)
-            })}
-        </div>
-    )
+    if (props.multiple) {
+        return (
+            <div>
+                {props.sourceData?.map(item => {
+                    return renderItem(item, props.selected, props.onChange)
+                })}
+            </div>
+        )
+    } else {
+        return (
+            <div>未完成</div>
+        )
+    }
 }
 export default Tree;

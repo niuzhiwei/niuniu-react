@@ -45,7 +45,9 @@ const TreeExample: React.FunctionComponent = () => {
         <Tree
             sourceData={array}
             onChange={onChange}
-            selectedValues={selectedValues}></Tree>
+            selected={selectedValues}
+            multiple={true}
+        ></Tree>
     )
 }
 export default TreeExample;
