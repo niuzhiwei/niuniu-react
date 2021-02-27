@@ -8,6 +8,7 @@ import { Layout, Header, Aside, Content, Footer } from './lib/layout/layout'
 import FormExample from './lib/form/form.example';
 import ScrollExample from './lib/scroll/scroll.exapmle';
 import TreeExample from './lib/tree/tree.exapmle';
+import CitySelectExample from './lib/citySelect/citySelect.example';
 import './example.scss'
 const logo = require('./logo.png');
 
@@ -30,6 +31,7 @@ ReactDOM.render(
                         <li><NavLink to='/form'>表单</NavLink></li>
                         <li><NavLink to='/scroll'>滚动</NavLink></li>
                         <li><NavLink to='/tree'>树</NavLink></li>
+                        <li><NavLink to='/citySelect'>城市选择</NavLink></li>
                     </ul>
                 </Aside>
                 <Content className='site-main'>
@@ -39,6 +41,7 @@ ReactDOM.render(
                     <Route path='/form' component={FormExample} ></Route>
                     <Route path='/scroll' component={ScrollExample} ></Route>
                     <Route path='/tree' component={TreeExample} ></Route>
+                    <Route path='/citySelect' component={CitySelectExample} ></Route>
                 </Content>
             </Layout>
             <Footer className='site-footer'>
