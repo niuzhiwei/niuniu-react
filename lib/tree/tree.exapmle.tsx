@@ -32,13 +32,14 @@ const TreeExample: React.FunctionComponent = () => {
             { text: '3.2', value: '3.2' }
         ]
     }])
-    // const [selectedValues, setSelectedValues] = useState(['1.1.1']);
-    const [selectedValue, setSelectedValue] = useState('1.1.1')
+    const [selectedValues, setSelectedValues] = useState(['1.1.1']);
+    // const [selectedValue, setSelectedValue] = useState('1.1.1')
     return (
         <Tree
             sourceData={array}
-            onChange={(selected: string) => { setSelectedValue(selected) }}
-            selected={selectedValue}
+            onChange={(selected: string[]) => { setSelectedValues(selected) }}
+            selected={selectedValues}
+            multiple={true}
         ></Tree>
     )
 }
